@@ -44,7 +44,6 @@ align () {
         -ar $REF_CDS_SAM                       \
         -s  $ASSEMBLY_FASTA                    \
         -n  "output/$ASSEMBLY_OUTFILE.anchors" \
-        -R 1 -Q 1                              \
         -t $NUM_THREADS                        \
         -o  "output/$ASSEMBLY_OUTFILE.maf"     \
         -f  "output/$ASSEMBLY_OUTFILE.f_maf"   \
@@ -53,12 +52,8 @@ align () {
         2>"$ASSEMBLY_OUTFILE.err"
 }
 
-align Tift23/Tift23D2B1-P1-P5/PearlMillet.Tift.CHROMOSOMES.fasta         \
-      Tift23/Tift23D2B1-P1-P5/Tift23D2B1-P1-P5_Annotations/Tift_fil.gff3 \
-      ICRM06777/PearlMillet.ICMR06777.CHROMOSOMES.fasta                  \
-      ICRM06777
-
-align 100192/pearl_millet_aseembly.fa                   \
-      100192/pearl_millet_gff                           \
-      ICRM06777/PearlMillet.ICMR06777.CHROMOSOMES.fasta \
-      ICRM06777
+#/workdir/Vane/Vane/vane_commonBeans/downloads_sequences/Download
+align /workdir/Vane/Vane/vane_commonBeans/downloads_sequences/Download/Pvulgaris_442_v2.0.fa\
+      /workdir/Vane/Vane/vane_commonBeans/downloads_sequences/Download/Pvulgaris_442_v2.1.gene.gff3\
+      /workdir/Vane/Vane/vane_commonBeans/downloads_sequences/Download/Pvulgaris_218.fa\
+      Pvulgaris_218
